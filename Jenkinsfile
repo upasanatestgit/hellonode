@@ -31,7 +31,7 @@ node {
          * docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials')*/ 
         {   sh 'sudo docker login -u "upasanatestdocker" -p "Zephyr@17" docker.io'
         }
-               {
+               
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
